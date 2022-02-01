@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button-subscribe,
+.hotel-search-button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #83b3d3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hotel-search-button {
+  line-height: 36px;
+  background-color: #756257;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.background_image {
+  background-color: #68a2ca;
+  background-image: url(../images/background-main.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 485px;
+}
+
+.divider {
+  background-image: url(../images/divider.png);
+  width: 1200px;
+  height: 57px;
+  margin-top: -57px;
+}
+
+.welcome_image {
+  display: block;
+  margin: 0px auto;
+  padding-top: 51px;
+  width: 458px;
+  height: 352px;
+}
+
+.advantages-part,
+.hotel-search-list {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-reasons {
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.advantages-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-item:nth-child(even) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.advantages-item:nth-child(1),
+.advantages-item:nth-child(5) {
+  background-color: #83b3d3;
+  color: #ffffff;
+}
+
+.hotel-search-date {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.email-subscribe {
+  background-color: #68a2ca;
+  background-image: url(../images/background-blur.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 411px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.email-subscribe-list {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.email-subscribe-information {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.page-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-footer {
+  background-image: url(../images/background-footer.png);
+  height: 120px;
+  width: 1200px;
+}
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+/* Добавила display: flex чтобы было удобнее проверять визуально, т.к иначе фильтры наезжают на список */
+.background-filter {
+  background-image: url(../images/catalog-background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 408px;
+  color: #ffffff;
+  display: flex;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.control-input,
+.hotel-card-detail {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hotel-found {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Возник вопрос, зачем я сделала как ссылку? Если для более подробной информации надо нажать "подробнее". Сейчас это решение кажется неверным */
+.hotel-card-link {
+  font-size: 24px;
+  line-height: 31px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hotel-card-button,
+.hotel-card-favorites {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  background-color: #756257;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hotel-card-favorites {
+  background-color: #83b3d3;
+}
+
+/* Убрала временно текст из разметки, чтобы звезды не сливались, пока я не поняла, как их доделать до конца*/
+.stars {
+  background-image: url(../images/star.svg);
+  background-repeat: repeat-x;
+  width: 91px;
+  height: 17px;
+}
+
+.rating {
+  font-size: 16px;
+  line-height: 21px;
+  background-color: #f2f2f2;
+}
+
+.pagination-show-more {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83b3d3;
+  text-transform: uppercase;
+}
+
+.pagination-link {
+  color: #ffffff;
+  background-color: #83b3d3;
+}
