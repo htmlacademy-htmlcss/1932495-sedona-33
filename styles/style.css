@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   background-color: #ffffff;
   color: #000000;
@@ -38,6 +46,28 @@ body {
   background-color: #756257;
 }
 
+.logo {
+  width: 139px;
+  margin-right: auto;
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 250px;
+  margin-left: auto;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 26px;
@@ -45,6 +75,15 @@ body {
   text-align: center;
   text-decoration: none;
   color: inherit;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .background_image {
@@ -104,8 +143,7 @@ body {
   line-height: 21px;
 }
 
-.advantages-item:nth-child(1),
-.advantages-item:nth-child(5) {
+.advantages-item-box {
   background-color: #83b3d3;
   color: #ffffff;
 }
@@ -124,6 +162,12 @@ body {
   height: 411px;
   color: #ffffff;
   text-align: center;
+}
+
+.remove {
+  background-image: none;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .email-subscribe-list {
@@ -147,6 +191,10 @@ body {
   background-image: url(../images/background-footer.png);
   height: 120px;
   width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-contacts-phone {
@@ -163,12 +211,17 @@ body {
   height: 408px;
   color: #ffffff;
   display: flex;
+  margin-bottom: 50px;
 }
 
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  width: 528px;
+  height: 58px;
+  margin-top: 35px;
+  margin-left: 71px;
 }
 
 .catalog-filter-title {
@@ -183,11 +236,21 @@ body {
   line-height: 23px;
 }
 
+.hotel-card-detail {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .hotel-found {
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
   text-transform: uppercase;
+  width: 340px;
+  height: 39px;
+  margin-bottom: 56px;
 }
 
 /* Возник вопрос, зачем я сделала как ссылку? Если для более подробной информации надо нажать "подробнее". Сейчас это решение кажется неверным */
@@ -227,6 +290,15 @@ body {
 }
 
 .pagination-show-more {
+  display: flex;
+  margin: 0 auto;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination-show-more {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -238,4 +310,95 @@ body {
 .pagination-link {
   color: #ffffff;
   background-color: #83b3d3;
+}
+
+.htmlacademy-link {
+  width: 115px;
+  height: 33px;
+  margin-right: 72px;
+}
+
+.footer-social-list {
+  width: 107px;
+  height: 18px;
+  margin-left: 72px;
+}
+
+.hotel-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 72px;
+  margin-right: 72px;
+  padding: 0px;
+}
+
+.input {
+  display: flex;
+  width: 1200px;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.hotel-card-type {
+  width: 133px;
+}
+
+.hotel-card-price {
+  width: 143px;
+}
+
+.hotel-card-button {
+  width: 133px;
+}
+
+.hotel-card-favorites {
+  width: 140px;
+}
+
+.rating {
+  width: 160px;
+}
+
+.hotel-card-title {
+  width: 211px;
+  height: 31px;
+  font-size: 24px;
+}
+
+.advantages-item {
+  width: 400px;
+  height: 384px;
+}
+
+.advantages-list {
+  display: flex;
+  width: 1200px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.advantages-item-box {
+  display: flex;
+  width: 1400px;
+  padding: 0;
+  margin: 0;
+}
+
+.view-city,
+.view-bridge {
+  display: block;
+}
+
+.box {
+  flex-direction: column;
+}
+
+.container-advantages,
+.hotel-search {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
