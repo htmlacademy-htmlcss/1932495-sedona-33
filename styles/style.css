@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: > 2% and last 1 version
+*/
+
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -27,9 +34,15 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  min-width: 1200px;
   font-family: "PT Sans", sans-serif;
   background-color: #ffffff;
   color: #000000;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .container {
@@ -64,7 +77,6 @@ body {
 
 .button-subscribe {
   width: 200px;
-  height: 60px;
   border-radius: 0px 10px 10px 0px;
   border: none;
 }
@@ -75,7 +87,7 @@ body {
 
 .button-subscribe:focus {
   background-color: #68a2ca;
-  border: 3px solid #756257;
+  outline: 3px solid #756257;
 }
 
 .button-subscribe:active {
@@ -87,9 +99,8 @@ body {
   line-height: 36px;
   background-color: #756257;
   width: 575px;
-  height: 60px;
   border-radius: 10px;
-  padding: 15px 0;
+  padding: 13px 0;
 }
 
 .hotel-search-button:hover {
@@ -98,7 +109,7 @@ body {
 
 .hotel-search-button:focus {
   background-color: #615048;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .hotel-search-button:active {
@@ -124,6 +135,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-link {
@@ -208,6 +220,7 @@ body {
 }
 
 .button-nav:active {
+  background-color: #615048;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -280,7 +293,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin: 0px;
-  /* padding-top: 98px; */
 }
 
 .title-icon {
@@ -308,6 +320,8 @@ body {
   width: 220px;
   text-align: center;
   margin: 0px;
+  line-height: 21px;
+  font-size: 18px;
 }
 
 .advantages-item-box {
@@ -326,7 +340,7 @@ body {
 }
 
 .item-icon {
-  padding: 184px 75px 79px;
+  padding: 184px 75px 87px;
 }
 
 .with-icon {
@@ -386,7 +400,12 @@ body {
   flex-direction: column;
 }
 
+.container-advantages {
+  padding: 60px 240px 80px;
+}
+
 .email-text {
+  font-size: 18px;
   width: 600px;
   height: 60px;
   padding: 0px 20px;
@@ -398,7 +417,7 @@ body {
   background: #f2f2f2;
 }
 
-.email-text:invalid {
+.email-text:not(:placeholder-shown):invalid {
   background-color: #ffffff;
   outline: 2px solid #ff5757;
 }
@@ -432,7 +451,6 @@ body {
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
-  display: block;
 }
 
 .footer-contacts-phone:hover,
@@ -444,6 +462,7 @@ body {
 .htmlacademy-link:focus {
   outline: 3px solid #83b3d3;
   border-radius: 10px;
+  outline-offset: 5px;
 }
 
 .footer-contacts-phone:active,
@@ -455,9 +474,8 @@ body {
   background-image: url("../images/catalog-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  height: 408px;
   color: #ffffff;
-  padding: 35px 72px 86px 71px;
+  padding: 35px 72px 80px 71px;
   position: relative;
   top: -5px;
 }
@@ -472,6 +490,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -483,12 +502,13 @@ body {
 .min-price {
   border: 2px solid #ffffff;
   background: transparent;
-  padding: 13px 15px;
+  padding: 15px 15px;
   width: 50%;
   height: 48px;
   color: #ffffff;
   font-size: 18px;
   position: relative;
+  font-family: inherit;
 }
 
 .max-price {
@@ -548,8 +568,8 @@ body {
 }
 
 .button-confirm {
+  font: inherit;
   width: 160px;
-  height: 48px;
   background-color: #83b3d3;
   color: #ffffff;
   border-radius: 4px;
@@ -558,6 +578,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
+  padding: 15px;
 }
 
 .button-confirm:hover {
@@ -566,7 +587,7 @@ body {
 
 .button-confirm:focus {
   background-color: #68a2ca;
-  border: 3px solid #ffffff;
+  outline: 3px solid #ffffff;
 }
 
 .button-confirm:active {
@@ -599,10 +620,13 @@ body {
 .hotel-card {
   list-style-type: none;
   width: 340px;
-  height: 438px;
   display: flex;
   flex-direction: column;
   padding: 20px;
+}
+
+.hotel-card:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .control-input,
@@ -624,12 +648,12 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   width: 340px;
-  height: 39px;
   margin-right: 192px;
 }
 
 .hotel-card-button,
-.hotel-card-favorites {
+.hotel-card-favorites,
+.add-card {
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -657,7 +681,7 @@ body {
 
 .hotel-card-favorites:focus {
   background-color: #68a2ca;
-  outline: 1px solid #756257;
+  outline: 3px solid #756257;
 }
 
 .hotel-card-favorites:active {
@@ -708,10 +732,6 @@ body {
   opacity: 0.3;
 }
 
-.first-hotel {
-  margin-bottom: 10px;
-}
-
 .stars {
   background-image: url("../images/star.svg");
   background-repeat: repeat-x;
@@ -734,19 +754,18 @@ body {
   line-height: 21px;
   background-color: #f2f2f2;
   width: 160px;
-  height: 37px;
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
   text-align: center;
-  padding-top: 5px;
+  padding: 5px 0px;
 }
 
 .pagination {
   display: flex;
   list-style-type: none;
   padding: 0px;
-  margin: 0px 295px 0px 0px;
+  margin: 0px;
 }
 
 .pagination-show-more {
@@ -789,23 +808,24 @@ body {
 
 .pagination-item {
   display: flex;
-  width: 55px;
-  height: 55px;
   background-color: #83b3d3;
-  margin-right: 8px;
   align-items: center;
   justify-content: center;
   border: none;
 }
 
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 55px;
-  height: 55px;
   padding: 15px 22px;
   color: #ffffff;
   text-decoration: none;
+  min-width: 55px;
+  min-height: 55px;
 }
 
 .pagination-link:hover {
@@ -841,23 +861,36 @@ body {
 }
 
 .catalog-hotels {
-  padding: 40px 72px 34px;
+  padding: 27px 72px 30px;
 }
 
 .input-hotel {
   display: flex;
-  margin-right: 51px;
-  width: 180px;
   align-items: center;
   font-size: 18px;
+  margin-right: 51px;
+  margin-left: auto;
 }
 
 .hotel-count {
-  display: block;
   width: 160px;
   height: 48px;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
+  padding: 13px 17px;
+  background-image: url(../images/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select-hotel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 160px;
 }
 
 .footer-social-item {
@@ -887,8 +920,8 @@ body {
 
 .footer-social-icon:focus {
   outline: 3px solid #83b3d3;
-  border-radius: 4px;
-  outline-offset: 3px;
+  border-radius: 1px;
+  outline-offset: 5px;
 }
 
 .footer-social-icon:active path {
@@ -932,11 +965,13 @@ body {
   background-repeat: no-repeat;
   background-position: right 16px center;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .hotel-choice:hover,
 .hotel-choice:focus {
-  outline: 2px solid #83b3d3;
+  border: 2px solid #83b3d3;
 }
 
 .hotel-choice:active {
@@ -955,7 +990,6 @@ body {
 
 .hotel-card-title {
   width: 211px;
-  height: 31px;
   font-size: 24px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -966,7 +1000,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 400px;
-  height: 384px;
 }
 
 .advantages-list {
@@ -993,10 +1026,6 @@ body {
   align-items: center;
   width: 400px;
   padding: 97px 90px 87px;
-}
-
-.container-advantages {
-  padding: 63px 240px 80px;
 }
 
 .hotel-search {
@@ -1169,7 +1198,6 @@ body {
 }
 
 .modal-container {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1177,6 +1205,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 1;
 }
 
 .modal-container {
@@ -1209,6 +1238,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+
+.calendar {
+  opacity: 0.3;
 }
 
 .modal-close-button:hover {
@@ -1502,4 +1535,22 @@ body {
 
 .control-mark:active {
   opacity: 0.3;
+}
+
+.icon-minus:hover > path,
+.icon-plus:hover > path {
+  opacity: 1;
+}
+
+.icon-minus:focus,
+.icon-plus:focus {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+  border-radius: 1px;
+  outline-offset: 3px;
+}
+
+.icon-minus:active > path,
+.icon-plus:active > path {
+  opacity: 0.2;
 }
