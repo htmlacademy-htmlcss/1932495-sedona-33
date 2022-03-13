@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles/style.css">
   <title>Проект Седона</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 </head>
 
 <body>
   <div class="container">
+    <!-- Шапка -->
     <header class="page-header">
       <nav class="navigation">
-        <img class="logo" src="images/logo.svg" alt="Логотип города" width="139" height="70">
+        <!-- Лого -->
+        <img class="logo" src="images/logo.svg" alt="Логотип города." width="139" height="70">
         <ul class="navigation-list first-list">
           <li class="navigation-item">
             <a class="navigation-link navigation-link-current" href="#">Главная</a>
@@ -26,8 +29,8 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-item search-icon">
             <a class="navigation-icon svg" href="#">
-              <svg aria-hidden="true" focusable="false" width="20" height="19" viewBox="0 0 20 19" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" width="20" class="nav-icon" height="19" viewBox="0 0 20 19"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19.0257 17.05L15.3152 13.35C16.318 12.05 17.02 10.35 17.02 8.44995C17.02 4.04995 13.4098 0.449951 8.99732 0.449951C4.58483 0.449951 0.974609 4.14995 0.974609 8.54995C0.974609 12.95 4.58483 16.55 8.99732 16.55C10.8024 16.55 12.5072 15.95 13.9112 14.85L17.6217 18.55L19.0257 17.05ZM8.99732 14.55C5.68795 14.55 2.98029 11.85 2.98029 8.54995C2.98029 5.24995 5.68795 2.54995 8.99732 2.54995C12.3067 2.54995 15.0143 5.24995 15.0143 8.54995C15.0143 11.85 12.3067 14.55 8.99732 14.55Z"
                   fill="black" />
@@ -54,14 +57,16 @@
 
     <main class="main-container main">
       <div class="page-container">
+        <!--Главный заголовок -->
         <h1 class="visually-hidden">Город Седона</h1>
-        <img class="welcome_image" src="images/welcome.png" alt="Добро пожаловать в Седону" width="458" height="352">
+        <img class="welcome_image" src="images/welcome.png" alt="Добро пожаловать в Седону." width="458" height="352">
       </div>
 
 
 
       <section class="advantages">
         <div class="container-advantages">
+          <!-- Преимущества -->
           <h2 class="visually-hidden">Преимущества</h2>
           <p class="advantages-part">Седона — небольшой городок в Аризоне,
             заслуживающий большего!</p>
@@ -77,7 +82,7 @@
               <p class="advantages-description-box">Седона — не аттракцион <br> для туристов, там течёт <br>
                 своя жизнь</p>
             </div>
-            <img class="view-city" src="images/real-city.jpg" alt="Город Седона" width="800" height="384">
+            <img class="view-city" src="images/real-city.jpg" alt="Город Седона." width="800" height="384">
           </li>
           <li class="advantages-item advantages-item-icon-house item-icon">
             <h3 class="advantages-title title-icon">Жильё</h3>
@@ -96,7 +101,7 @@
             </p>
           </li>
           <li class="advantages-item-box">
-            <img class="view-bridge" src="images/bridge.jpg" alt="Мост Дьявола" width="800" height="384">
+            <img class="view-bridge" src="images/bridge.jpg" alt="Мост Дьявола." width="800" height="384">
             <div class="box">
               <h3 class="advantages-title">Там есть <br> мост дьявола</h3>
               <span class="number">— №2 —</span>
@@ -131,7 +136,7 @@
           гостиниц в Седоне</p>
         <a class="hotel-search-button" href="catalog.html">Поиск гостиницы в Седоне</a>
       </section>
-
+      <!-- Подписка на рассылку -->
       <section class="email-subscribe">
         <h2 class="visually-hidden">Подписаться на рассылку</h2>
         <b class="email-subscribe-list">Подпишитесь на рассылку</b>
@@ -145,7 +150,7 @@
       </section>
     </main>
 
-
+    <!-- Контакты -->
     <footer class="page-footer">
       <section class="social-footer">
         <h2 class="visually-hidden">Социальные сети</h2>
@@ -194,10 +199,10 @@
       </a>
     </footer>
   </div>
-
+  <!-- Модальное окно -->
   <div class="modal-container">
     <div class="modal modal-search">
-      <button class="modal-close-button">
+      <button class="modal-close-button" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-content">
@@ -209,7 +214,8 @@
               value="27 апреля 2020">
             <button class="search-calendar" type="button">
               <span class="visually-hidden">Календарь</span>
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="calendar" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10C5.8 10 6 9.8 6 9.5C6 9.2 5.8 9 5.5 9C5.2 9 5 9.2 5 9.5C5 9.8 5.2 10 5.5 10Z"
                   fill="black" />
                 <path
@@ -242,11 +248,12 @@
           <div class="search-mistake">Мы не можем отправить вас в прошлое.</div>
           <p class="search-form-modal">
             <label class="date-to" for="date-to">Дата выезда:</label>
-            <input class="search-form-input input-date" type="text" id="date-from" name="date-from"
+            <input class="search-form-input input-date" type="text" id="date-to" name="date-from"
               value="1 сентября 2021">
             <button class="search-calendar" type="button">
               <span class="visually-hidden">Календарь</span>
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="calendar" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10C5.8 10 6 9.8 6 9.5C6 9.2 5.8 9 5.5 9C5.2 9 5 9.2 5 9.5C5 9.8 5.2 10 5.5 10Z"
                   fill="black" />
                 <path
@@ -282,16 +289,16 @@
               <p class="search-form-modal number-person">
                 <label class="grownup" for="grownup">Взрослые:</label>
                 <button class="search-quantity search-quantity-less" type="button">
-                  <svg class="icon-minus" width="13" height="13" viewBox="0 0 13 1" fill="none"
+                  <svg class="icon-minus" width="13" height="13" viewBox="0 0 13 1" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black" />
+                    <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="currentColor" />
                   </svg>
                   <span class="visually-hidden">Уменьшить</span></button>
                 <input class="search-form-input count-person" id="grownup" type="text" name="grownup" value="2">
                 <button class="search-quantity search-quantity-more" type="button">
-                  <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                  <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black" />
+                    <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="currentColor" />
                   </svg>
                   <span class="visually-hidden">Увеличить</span></button>
               </p>
@@ -300,7 +307,7 @@
               <label class="children" for="children">Дети:</label>
               <div class="tooltip">
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="15" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
                   </svg>
                 </button>
@@ -310,16 +317,16 @@
                 </div>
               </div>
               <button class="search-quantity search-quantity-less" type="button">
-                <svg class="icon-minus" width="13" height="13" viewBox="0 0 13 1" fill="none"
+                <svg class="icon-minus" width="13" height="13" viewBox="0 0 13 1" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black" />
+                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="currentColor" />
                 </svg>
                 <span class="visually-hidden">Уменьшить</span></button>
               <input class="search-form-input count-person" id="children" type="text" name="children" value="1">
               <button class="search-quantity search-quantity-more" type="button">
-                <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                <svg class="icon-plus" width="13" height="13" viewBox="0 0 13 13" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black" />
+                  <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="currentColor" />
                 </svg>
                 <span class="visually-hidden">Увеличить</span></button>
             </div>
