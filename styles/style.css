@@ -32,6 +32,7 @@ html {
 }
 
 body {
+  font-family: "PT Sans", "Arial", sans-serif;
   margin: 0;
   min-height: 100%;
   min-width: 1200px;
@@ -488,16 +489,6 @@ img {
   font-weight: 700;
 }
 
-.breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  margin-bottom: 45px;
-  margin-top: -7px;
-}
-
 .max-price,
 .min-price {
   border: 2px solid #ffffff;
@@ -619,7 +610,6 @@ img {
 
 .hotel-card {
   list-style-type: none;
-  width: 340px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -1040,6 +1030,15 @@ img {
   margin-right: 167px;
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 45px;
+  margin-top: -7px;
+}
+
 .breadcrumbs-item {
   color: inherit;
   margin-right: 30px;
@@ -1294,8 +1293,10 @@ img {
 }
 
 .search-form-input {
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
+  line-height: 40px;
   background-color: #f2f2f2;
   border: none;
   width: 33px;
@@ -1304,7 +1305,6 @@ img {
 
 .count-person {
   text-align: center;
-  font-family: "PT Sans";
 }
 
 .search-form-modal {
@@ -1318,7 +1318,6 @@ img {
   width: 420px;
   height: 50px;
   padding-left: 19px;
-  font-family: "PT Sans";
 }
 
 .input-date:hover {
