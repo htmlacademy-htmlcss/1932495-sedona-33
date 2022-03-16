@@ -44,6 +44,7 @@ body {
 img {
   max-width: 100%;
   object-fit: contain;
+  height: auto;
 }
 
 .container {
@@ -129,6 +130,7 @@ img {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  justify-content: space-between;
 }
 
 .navigation-list {
@@ -152,9 +154,9 @@ img {
 
 .navigation-link-current::before {
   position: absolute;
-  right: 805px;
-  bottom: 3px;
-  left: 185px;
+  right: 815px;
+  bottom: 15px;
+  left: 175px;
   height: 2px;
   background-color: #756257;
   content: "";
@@ -174,7 +176,7 @@ img {
 }
 
 .first-list {
-  margin-right: 295px;
+  margin-right: 285px;
 }
 
 .search-icon {
@@ -241,7 +243,7 @@ img {
     url("../images/background-main.jpg");
   padding: 51px 371px 82px;
   position: relative;
-  top: -5px;
+  top: -15px;
 }
 
 .advantages-part {
@@ -472,13 +474,14 @@ img {
 }
 
 .page-filter {
-  background-image: url("../images/catalog-background.jpg");
-  background-size: 100% auto;
+  background-color: #83b3d3;
   background-repeat: no-repeat;
   color: #ffffff;
   padding: 35px 72px 80px 71px;
   position: relative;
-  top: -5px;
+  top: -15px;
+  background: center/100% no-repeat url("../images/catalog-background.jpg");
+  background-size: cover;
 }
 
 .inner-header-title {
@@ -529,6 +532,7 @@ img {
 }
 
 .range-field {
+  position: relative;
   width: 287px;
   margin-top: 35px;
   margin-right: 81px;
@@ -678,6 +682,11 @@ img {
   background-color: #68a2ca;
   outline: 1px solid #756257;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.detail-style {
+  text-decoration: none;
+  text-align: center;
 }
 
 .detail-style:hover {
@@ -851,7 +860,7 @@ img {
 }
 
 .catalog-hotels {
-  padding: 27px 72px 30px;
+  padding: 20px 72px 30px;
 }
 
 .input-hotel {
@@ -1104,15 +1113,15 @@ img {
 
 .number-to-price {
   position: absolute;
-  top: 245px;
-  right: 330px;
+  top: 15px;
+  right: 20px;
 }
 
 .navigation-second-link-current::before {
   position: absolute;
-  right: 560px;
-  bottom: 3px;
-  left: 405px;
+  right: 570px;
+  bottom: 15px;
+  left: 395px;
   height: 2px;
   background-color: #756257;
   content: "";
@@ -1206,10 +1215,10 @@ img {
   background-color: rgba(242, 242, 242, 0.8);
   z-index: 1;
 }
-
+/*
 .modal-container {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
@@ -1283,13 +1292,24 @@ img {
   padding-top: 5px;
 }
 
+.search-mistake-error {
+  display: none;
+}
+
 .search-free-days {
   display: block;
   font-size: 16px;
   font-weight: 400;
   margin-left: 155px;
-  margin-bottom: 15px;
   padding-top: 5px;
+}
+
+.search-free-error {
+  display: none;
+}
+
+.date-modal {
+  margin-top: 15px;
 }
 
 .search-form-input {
@@ -1305,19 +1325,27 @@ img {
 
 .count-person {
   text-align: center;
+  height: 50px;
 }
 
 .search-form-modal {
   display: flex;
   justify-content: space-between;
-  margin: 0;
   position: relative;
+}
+
+.search-form-modal + .search-form-modal {
+  margin-top: 15px;
 }
 
 .input-date {
   width: 420px;
   height: 50px;
   padding-left: 19px;
+}
+
+.input-date::-webkit-input-placeholder {
+  color: #000000;
 }
 
 .input-date:hover {
@@ -1338,16 +1366,21 @@ img {
 
 .person-number {
   display: flex;
-  margin-bottom: 40px;
   margin-right: 56px;
+  align-items: center;
 }
 
 .search-calendar {
   position: absolute;
-  right: 17px;
-  top: 18px;
+  right: 18px;
+  bottom: 15px;
+  width: 16px;
+  height: 15px;
   border: none;
-  background-color: transparent;
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
 }
 
 .search-quantity {
@@ -1367,7 +1400,7 @@ img {
   color: #f2f2f2;
   text-transform: uppercase;
   font-weight: 700;
-  top: 50px;
+  margin-top: 25px;
 }
 
 .btn-search:hover {
@@ -1408,17 +1441,14 @@ img {
   width: 256px;
   height: 143px;
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   right: 110px;
   z-index: 1;
   border-radius: 10px;
 }
 
 .tooltip {
-  margin-top: 9px;
   margin-right: 25px;
-  width: 16px;
-  height: 16px;
 }
 
 .tooltip-text::after {
@@ -1434,7 +1464,6 @@ img {
 
 .children {
   margin-right: 10px;
-  padding-top: 10px;
 }
 
 .tooltip-toggle {
@@ -1490,7 +1519,8 @@ img {
   border-radius: 4px;
 }
 
-.control-mark {
+.control-mark,
+.mark-radio {
   position: absolute;
   top: 0;
   left: 0;
@@ -1507,7 +1537,7 @@ img {
   font-size: 18px;
 }
 
-.control-input[type="radio"]:checked + .control-mark::after {
+.control-input[type="radio"]:checked + .mark-radio::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -1523,16 +1553,55 @@ img {
   border-radius: 50%;
 }
 
-.control-mark:hover {
+.control-input[type="checkbox"]:hover + .control-mark::after {
   opacity: 0.6;
 }
 
-.control-mark:focus {
+.control-input[type="checkbox"]:focus + .control-mark::after {
   opacity: 0.6;
   outline: 3px solid #83b3d3;
 }
 
-.control-mark:active {
+.control-input[type="checkbox"]:active + .control-mark::after {
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:hover + .control-mark {
+  opacity: 0.6;
+}
+
+.control-input[type="checkbox"]:focus + .control-mark {
+  opacity: 0.6;
+  outline: 3px solid #83b3d3;
+}
+
+.control-input[type="checkbox"]:active + .control-mark {
+  opacity: 0.3;
+}
+
+.control-input[type="radio"]:hover + .mark-radio::after {
+  opacity: 0.6;
+}
+
+.control-input[type="radio"]:focus + .mark-radio::after {
+  opacity: 0.6;
+  outline: 3px solid #83b3d3;
+}
+
+.control-input[type="radio"]:active + .mark-radio::after {
+  opacity: 0.3;
+}
+
+.control-input[type="radio"]:hover + .mark-radio {
+  opacity: 0.6;
+}
+
+.control-input[type="radio"]:focus + .mark-radio {
+  opacity: 0.6;
+  outline: 3px solid #83b3d3;
+}
+
+.control-input[type="radio"]:active + .mark-radio {
   opacity: 0.3;
 }
 
@@ -1552,4 +1621,8 @@ img {
 .icon-minus:active > path,
 .icon-plus:active > path {
   opacity: 0.2;
+}
+
+.control-input[type="checkbox"]:focus + .control-mark::after {
+  outline: 3px solid #83b3d3;
 }
