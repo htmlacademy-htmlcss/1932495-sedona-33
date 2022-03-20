@@ -169,6 +169,15 @@ img {
   color: rgba(117, 98, 87, 0.3);
 }
 
+.navigation-logo:hover {
+  outline: 3px solid #000000;
+}
+
+.navigation-logo:focus,
+.navigation-logo:active {
+  outline: 3px solid #000000;
+}
+
 .nav-logo {
   height: auto;
 }
@@ -1250,10 +1259,10 @@ img {
   background-position: center;
   cursor: pointer;
 }
-
+/*
 .calendar {
   opacity: 0.3;
-}
+} */
 
 .modal-close-button:hover {
   background-color: #e6e6e6;
@@ -1345,6 +1354,7 @@ img {
   width: 420px;
   height: 50px;
   padding-left: 19px;
+  padding-right: 40px;
 }
 
 .input-date::-webkit-input-placeholder {
@@ -1383,7 +1393,6 @@ img {
   background-image: url("../images/calendar.svg");
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.5;
 }
 
 .search-quantity {
